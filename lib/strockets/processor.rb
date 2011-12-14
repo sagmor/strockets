@@ -17,6 +17,8 @@ module Strockets
 
     private
       def stitch?(scope)
+        return false if scope.pathname.basename.to_s =~ /\.jst/ 
+
         directive = File.open(scope.pathname){|f| f.readline}.downcase.gsub(/[^a-z\-]/,"") rescue nil
 
         Strockets.compatibility_mode? ? directive == "stitch" : directive != "no-stitch"
