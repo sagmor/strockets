@@ -1,22 +1,35 @@
 # Strockets
+
 Use Stitch allong with Sprockets
 
 ## Warning
 This is currently under revision so the gem's API might change
 
-
 ## Usage
-### Rails 3.1
 
-Just add the following to an initializer
+Just include this gem in your Gemfile
 
 ```ruby
-Strockets.enable Rails.application.assets
+gem 'sprockets'
 ```
 
-and append a .stitch extension to your .js files like `app/assets/javascripts/sample.js.stitch.coffee`
+And all your javascript files will be compiled using Stitch/CommonJS.
+You can add 
 
-## TODO
-Check the issues at:
+```javascript
+// no-stitch
+```
 
-  https://github.com/sagmor/strockets/issues
+on any file's first line to prevent it from being stitched.
+
+Alternatively you can enable the compatibility mode with
+
+```ruby
+Sprockets.compatibility_mode!
+```
+
+to conditionaly stitch files that have the following header:
+
+```javascript
+// stitch
+```
