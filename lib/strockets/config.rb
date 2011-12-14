@@ -1,11 +1,11 @@
 module Strockets
   module Config
-    def stitch_by_default?
-      @stitch_by_default || false
+    def compatibility_mode?
+      @compatibility_mode || false
     end
 
-    def stitch_by_default!
-      @stitch_by_default = true
+    def compatibility_mode!
+      @compatibility_mode = true
     end
   end
 

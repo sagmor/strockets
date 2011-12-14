@@ -17,9 +17,9 @@ module Strockets
 
     private
       def stitch?(scope)
-        directive = File.open(scope.pathname){|f| f.readline}.downcase.gsub(/[^a-z\-]/,"")
+        directive = File.open(scope.pathname){|f| f.readline}.downcase.gsub(/[^a-z\-]/,"") rescue nil
 
-        Strockets.stitch_by_default? ? directive != "no-stitch" : directive == "stitch"
+        Strockets.compatibility_mode? ? directive == "stitch" : directive != "no-stitch"
       end
 
       def indent(string)
