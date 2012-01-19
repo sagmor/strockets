@@ -11,18 +11,18 @@ module Strockets
       @namespace = namespace
     end
 
-    def default_to_stitch?
-      @default_to_stitch || true
+    def defaults_to_stitch?
+      @defaults_to_stitch || true
     end
-    alias_method :default_to_stitch, :default_to_stitch?
+    alias_method :defaults_to_stitch, :defaults_to_stitch?
 
-    def default_to_stitch=(default)
-      @stitch_by_default = default
+    def defaults_to_stitch=(default)
+      @defaults_to_stitch = default
     end
 
     def stitch_exceptions
       @stitch_exceptions ||
-        default_to_stitch? ? STITCH_EXCEPTIONS_ON_TRUE : STITCH_EXCEPTIONS_ON_FALSE
+        defaults_to_stitch? ? STITCH_EXCEPTIONS_ON_TRUE : STITCH_EXCEPTIONS_ON_FALSE
     end
 
     def stitch_exceptions=(stitch_exceptions)

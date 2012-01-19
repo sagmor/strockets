@@ -12,16 +12,20 @@ This is currently under revision so the gem's API might change
 Just include this gem in your Gemfile
 
 ```ruby
-gem 'sprockets'
+# Gemfile
+gem 'strockets'
 ```
 
 ### Others
 
-After adding the gem to your Gemfile, register Strockets on your sprockets environment:
+Add the gem to your Gemfile and register Strockets on your sprockets environment:
 
 ```ruby
-env.append_path Strockets.stitch_path
+# Gemfile
+gem 'strockets'
 
+# initializer_file.rb
+env.append_path Strockets.stitch_path
 env.register_postprocessor(
   'application/javascript',
   Strockets::StitchPostprocessor
@@ -43,5 +47,5 @@ But you can force the stitching of a file by adding a directive to your file's h
 Strockets has the following options:
 
  * `Strockets.namespace`: Which namespace to use
- * `Strockets.default_to_stitch`: Default Action (to stitch or not to stitch)
+ * `Strockets.defaults_to_stitch`: Default Action (to stitch or not to stitch)
  * `Strockets.stitch_exceptions`: Which files shouldn't follow the default action

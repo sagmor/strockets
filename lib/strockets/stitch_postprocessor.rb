@@ -22,7 +22,7 @@ module Strockets
         stitch = directive?
 
         if stitch.nil?
-          stitch = Strockets.default_to_stitch?
+          stitch = Strockets.defaults_to_stitch?
           stitch = !stitch if exception?
         end
 
