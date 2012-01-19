@@ -3,7 +3,7 @@
 Use Stitch allong with Sprockets
 
 ## Warning
-This is currently under revision so the gem's API might change
+This is currently under revision so the gem's API might change but at this state is very less likely
 
 ## Installation
 
