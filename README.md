@@ -34,7 +34,7 @@ env.register_postprocessor(
 ```
 ## Usage
 
-By default Strockets will Stitch every file excluding application.js and those inside a vendor directory or a gem.
+By default Strockets will Stitch every file excluding application.js, templates and those inside a vendor directory or a gem.
 
 But you can force the stitching of a file by adding a directive to your file's header like
 
