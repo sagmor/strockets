@@ -1,6 +1,6 @@
 module Strockets
   module Config
-    STITCH_EXCEPTIONS_ON_TRUE = [%r[/application\.js], %r[/\.jst], %r[/vendor/], %r[/gems/]]
+    STITCH_EXCEPTIONS_ON_TRUE = [%r[/application\.js], /\.jst/, %r[/vendor/], %r[/gems/]]
     STITCH_EXCEPTIONS_ON_FALSE = []
 
     def namespace
