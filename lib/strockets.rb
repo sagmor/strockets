@@ -1,5 +1,4 @@
 require "strockets/version"
 require "strockets/config"
-require "strockets/processor"
-require "strockets/bundle"
-require "strockets/environment"
+require "strockets/stitch_postprocessor"
+require "strockets/railtie"

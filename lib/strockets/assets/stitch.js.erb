@@ -1,5 +1,6 @@
+//= stitch false
 (function(/*! Stitch !*/) {
-  if (!this.require) {
+  if (!this.<%= Strockets.namespace %>) {
 
     var modules = {},
         cache = {},
@@ -46,11 +47,11 @@
           return path.split('/').slice(0, -1).join('/');
         };
 
-      this.require = function(name) {
+      this.<%= Strockets.namespace %> = function(name) {
         return require(name, '');
       }
 
-    this.require.define = function(bundle) {
+    this.<%= Strockets.namespace %>.define = function(bundle) {
       for (var key in bundle)
         modules[key] = bundle[key];
     };
