@@ -12,7 +12,7 @@ module Strockets
     end
 
     def defaults_to_stitch?
-      @defaults_to_stitch || true
+      @defaults_to_stitch.nil? ? true : @defaults_to_stitch
     end
     alias_method :defaults_to_stitch, :defaults_to_stitch?
 
